@@ -1,6 +1,6 @@
 body{
     background-color: rgba(0, 0, 0, 0.829);
-    font-family: 'Koh Santepheap', cursive;
+    font-family: 'Yaldevi', sans-serif;
     font-size: 15px;
 }
 
@@ -67,4 +67,9 @@ input{
     height: 40px;
     background-color: white;
     text-align: center;
+    display:flex;
+    justify-content: center;
+    align-items: center
+
+    
 }

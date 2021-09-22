@@ -5,17 +5,23 @@ function init() {
 init()
 
 function addArticle(event) {
+
     let input = document.querySelector("input");
     let wrapOne = document.getElementById("wrapOne")
 
     const div = document.createElement("div")
 
-    div.classList.add("innerdiv")
+    // div.classList.add("innerdiv")
 
     // wrapOne.innerHTML +=
     //     `<div id="source">${input.value} <button class="innerButton"></button></div>`  
-    div.innerHTML += `<div class="source"> <button  class = "secondInnerButton"><i class="fas fa-trash fa-2x"></i> </button> <div class="special">${input.value}</div><button class="innerButton"><i class="fas fa-arrow-circle-right fa-2x"></i> </button></div>`
-    wrapOne.appendChild(div)
+
+    if (input.value != "") {
+        div.innerHTML += `<div class="source"> <button  class = "secondInnerButton"><i class="fas fa-trash fa-2x"></i> </button> <div class="special">${input.value}</div><button class="innerButton"><i class="fas fa-arrow-circle-right fa-2x"></i> </button></div>`
+        wrapOne.appendChild(div)
+    } else { alert("You cant add empty to do") }
+
+
 
     // let innerButton = document.getElementById("innerButton")
     // innerButton.addEventListener("click", arrowNext)
@@ -30,13 +36,21 @@ function addArticle(event) {
 
     let secondInnerButton = document.querySelectorAll(".secondInnerButton")
 
+    secondInnerButton.forEach(button => {
+        for (var i = 0; i < secondInnerButton.length; i++) {
+            secondInnerButton[i].addEventListener('click', function () {
+                this.parentNode.remove();
+            });
+        }
+    })
 
 
-    for (var i = 0; i < secondInnerButton.length; i++) {
-        secondInnerButton[i].addEventListener('click', function () {
-            this.parentNode.remove();
-        });
-    }
+
+    // for (var i = 0; i < secondInnerButton.length; i++) {
+    //     secondInnerButton[i].addEventListener('click', function () {
+    //         this.parentNode.remove();
+    //     });
+    // }
 
 
     for (var i = 0; i < innerButton.length; i++) {
