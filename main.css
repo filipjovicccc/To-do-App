@@ -1,7 +1,7 @@
-body{
-    background-color: rgba(0, 0, 0, 0.829);
+ body{
+    background-color: rgba(63, 82, 217);
     font-family: 'Yaldevi', sans-serif;
-    font-size: 15px;
+    font-size: 17px;
 }
 
 .header{
@@ -30,11 +30,10 @@ input{
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow: hidden;
+    border-radius: 25px 25px 25px 25px;
 }
 
-/* .button{
-    width: 100px;
-} */
 
 .wraps:nth-of-type(1){
     background-color: green;
@@ -50,16 +49,15 @@ input{
 .innerdiv{
     width: 200px;
     height: 50px;
-    /* border: 1px solid black;
-    background-color: white; */
     display:flex;
     align-items: center;
     justify-content: center;
-    flex-direction: row;
+    flex-direction: column;
     
 }
 .source{
     display: flex;
+    margin-top: 5px;
 }
 
 .special {
@@ -69,7 +67,9 @@ input{
     text-align: center;
     display:flex;
     justify-content: center;
-    align-items: center
+    align-items: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
 
     
 }
